@@ -7,10 +7,20 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <!-- Edit on Github -->
+  <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
 </head>
 <body>
   <div id="app"></div>
   <script>
+    const config = {
+        editOnGithub: {
+          docBase: 'https://github.com/moretrees/moretrees-docs/tree/master/docs',
+          docEditBase: 'https://moretrees.github.io/moretrees-docs',
+          title: 'Edit document',
+        },
+      };
+
     window.$docsify = {
       name: 'moretrees - docs',
       relativePath:true,
@@ -21,7 +31,13 @@
       auto2top: true,
       coverpage: true,
       coverpage: 'cover.md',
-      routerMode: 'history', // default: 'hash'
+      alias: {
+          '/.*/sidebar.md': '/./sidebar.md',
+        },
+      routerMode: 'hash', // default: 'hash'
+      plugins: [
+          EditOnGithubPlugin.create(config.editOnGithub.docBase, null, config.editOnGithub.title),
+        ],
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>

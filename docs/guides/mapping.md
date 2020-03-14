@@ -36,3 +36,7 @@ Make sure you're logged in to [moretrees.nyc](https://moretrees.nyc)...
 ### You decide to photograph the empty tree bed
 
 ### Submitting your data to the moretrees.nyc website
+
+## Maintenance
+
+### Flagging treebeds as "done" 
